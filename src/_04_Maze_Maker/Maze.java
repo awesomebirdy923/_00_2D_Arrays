@@ -51,4 +51,6 @@ public class Maze {
 	public int getHeight() {
 		return height;
 	}
+	
+	
 }
