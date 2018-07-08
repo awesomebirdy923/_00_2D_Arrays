@@ -22,17 +22,21 @@ public class MazeDisplay extends JPanel{
 		window = new JFrame();
 		
 		window.add(this);
+		
+		
+		maze = MazeMaker.generateMaze(5, 5);
+		
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setVisible(true);
 		window.pack();
-		
-		maze = MazeMaker.generateMaze(5, 5);
 		repaint();
 	}
 	
 	@Override
 	public void paintComponent(Graphics g){
+		if(maze != null) {
 		maze.draw(g);
+		}
 	}
 	
 	public static void main(String[] args) {
